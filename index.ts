@@ -104,3 +104,7 @@ export function isSameObject(obj1: any, obj2: any): boolean {
     return obj1[key] === obj2[key];
   });
 }
+
+export function removeAccents(str: string) {
+  return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
